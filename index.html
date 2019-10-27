@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio visualizer</title>
+	<link rel="stylesheet" href="app.css">
+</head>	
+<body>
+
+	<div class="full-heigth-container grid">
+		<div id="visual">
+			<div id="loader" style="max-width: 1024px;margin-left: auto;margin-right:auto ">
+				<input type="file" id="file-input" accept="audio/*" /> 
+				<div id="sliders">
+					<div class="slidecontainer">
+						<input type="range" min="1" max="255" value="250" class="slider" id="r">
+					</div>
+					<div class="slidecontainer">
+						<input type="range" min="1" max="255" value="250" class="slider" id="g">
+					</div>
+					<div class="slidecontainer">
+						<input type="range" min="1" max="255" value="250" class="slider" id="b">
+					</div>
+				</div>
+				<h2 id="title"></h2>
+			</div>
+			<canvas id="canvas"></canvas>
+		</div>
+
+		<div id="navigation">
+			<div id="audio-container">
+				<audio controls id="audio"></audio>
+			</div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
